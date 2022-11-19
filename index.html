@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- glamor cannot be imported via system.js v0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/glamor/3.0.0-3/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.47/system.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('./ui/logic/main.jsx').catch( function(err) {
+        console.error(err);
+      })
+    </script>
+  </body>
+</html> 
