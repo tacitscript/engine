@@ -29,7 +29,7 @@ const style = {
     " .content": {
       display: "flex",
       flex: "1 1 auto",
-      backgroundImage: "url(https://pgn.chessbase.com/common/media/chess/OrangeBrighterSoftBacklightLessSatur.jpg)"
+      backgroundImage: "url(ui/images/wood.jpg)"
     },
     " .sidebar": {
       backgroundImage: "linear-gradient( to bottom, hsla( 30, 40%, 92%, 0.4 ) 30%, hsla( 30, 40%, 75%, 0.4 ) )",
