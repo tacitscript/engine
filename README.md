@@ -1,7 +1,7 @@
 ## engine
 Generic game engine with pluggable game modules
 
-Live:  https://tacitscript.github.io/engine/index.html
+Live:  https://tacitscript.github.io/engine
 
 #### Launch engine in debug (transpiled in browser with sourcemaps)
 
