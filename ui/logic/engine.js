@@ -1,1 +1,1 @@
-export default new Worker("ui/logic/web-worker.js");
+export default new Worker("web-worker.js");

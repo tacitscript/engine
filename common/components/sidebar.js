@@ -1,14 +1,10 @@
-import React from "react";
-import * as R from "ramda";
+const { css } = Glamor;
 import {
   ExpansionPanel,
   ExpansionPanelSummary,
   ExpansionPanelDetails,
   Typography
 } from "material-ui";
-import { Scrollbar } from "react-scrollbars-custom";
-
-const { css } = Glamor;
 
 const style = {
   overflow: "hidden",
@@ -102,53 +98,51 @@ export default class extends React.Component {
         {dockPosition !== "LEFT" ? (
           <div className="dragger" onMouseDown={this.handleMouseDown} />
         ) : null}
-        <Scrollbar>
           <div className="pane">
             <div className="contents">
-              {R.addIndex(R.map)(
-                ({ title, className, panels, onMouseLeave }, index) => (
-                  <ExpansionPanel
-                    key={index}
-                    className="expansion-panel"
-                    onMouseLeave={onMouseLeave || (() => {})}
-                    expanded={data.length > 1 ? index === expandedIndex : true}
-                    onChange={(handleChange => handleChange.bind(this)(index))(
-                      this.props.handleChange || this.handleChange
-                    )}
+            {R.addIndex(R.map)(
+              ({ title, className, panels, onMouseLeave }, index) => (
+                <ExpansionPanel
+                  key={index}
+                  className="expansion-panel"
+                  onMouseLeave={onMouseLeave || (() => {})}
+                  expanded={data.length > 1 ? index === expandedIndex : true}
+                  onChange={(handleChange => handleChange.bind(this)(index))(
+                    this.props.handleChange || this.handleChange
+                  )}
+                >
+                  <ExpansionPanelSummary
+                    className={`expansion-panel-summary${
+                      data.length <= 1 ? " fixed" : ""
+                    }`}
+                    expandIcon={
+                      data.length > 1 ? (
+                        <i className="fas fa-angle-down"/>
+                      ) : userClosable ? (
+                        <i className="fas fa-times"/>
+                      ) : null
+                    }
                   >
-                    <ExpansionPanelSummary
-                      className={`expansion-panel-summary${
-                        data.length <= 1 ? " fixed" : ""
-                      }`}
-                      expandIcon={
-                        data.length > 1 ? (
-                          <i className="fas fa-angle-down"/>
-                        ) : userClosable ? (
-                          <i className="fas fa-times"/>
-                        ) : null
-                      }
-                    >
-                      <Typography>{title}</Typography>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails
-                      className={`expansion-panel-details ${
-                        className ? className : ""
-                      }`}
-                    >
-                      {R.addIndex(R.map)(
-                        (jsx, panelIndex) => (
-                          <div key={panelIndex}>{jsx}</div>
-                        ),
-                        panels
-                      )}
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                ),
-                data
-              )}
-            </div>
+                    <Typography>{title}</Typography>
+                  </ExpansionPanelSummary>
+                  <ExpansionPanelDetails
+                    className={`expansion-panel-details ${
+                      className ? className : ""
+                    }`}
+                  >
+                    {R.addIndex(R.map)(
+                      (jsx, panelIndex) => (
+                        <div key={panelIndex}>{jsx}</div>
+                      ),
+                      panels
+                    )}
+                  </ExpansionPanelDetails>
+                </ExpansionPanel>
+              ),
+              data
+            )}
           </div>
-        </Scrollbar>
+        </div>
         {dockPosition === "LEFT" ? (
           <div className="dragger" onMouseDown={this.handleMouseDown} />
         ) : null}

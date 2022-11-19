@@ -1,4 +1,3 @@
-import * as R from "ramda";
 
 const iterateTree = ({tree, getNextStates, getResult, player, ply}) => {
   const results = (() => {

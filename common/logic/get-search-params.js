@@ -1,4 +1,3 @@
-import * as R from "ramda";
 
 export default () =>
   location.search

@@ -1,6 +1,4 @@
-import React from "react";
-import BestLines from "../components/best-lines.jsx";
-import * as R from "ramda";
+import BestLines from "../components/best-lines.js";
 
 const {css} = Glamor;
 

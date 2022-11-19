@@ -1,5 +1,3 @@
-import React from "react";
-import * as R from "ramda";
 import engine from "ui/logic/engine.js";
 
 const {css} = Glamor;

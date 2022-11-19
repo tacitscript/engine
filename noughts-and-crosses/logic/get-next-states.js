@@ -1,4 +1,3 @@
-import * as R from "ramda";
 
 const directions = [
   "top-left",

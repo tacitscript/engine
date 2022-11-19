@@ -1,5 +1,6 @@
 importScripts("//cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.47/system.js");
-importScripts("../../systemjs.config.js");
+importScripts("//cdnjs.cloudflare.com/ajax/libs/ramda/0.27.1/ramda.js");
+importScripts("systemjs.config.js");
 
 let messages = [];
 let tree = {};
@@ -11,10 +12,9 @@ addEventListener("message", ({data}) => {
 });
 
 Promise.all([
-  System.import("ramda25"),
-  System.import("./module.js"),
-  System.import("../../noughts-and-crosses/logic/module.js")
-]).then(([R, {iterateTree}, {getInitialState, getResult, getNextStates}]) => {
+  System.import("ui/logic/module.js"),
+  System.import("noughts-and-crosses/logic/module.js")
+]).then(([{iterateTree}, {getInitialState, getResult, getNextStates}]) => {
   let stop = false;
 
   const postState = () => postMessage({

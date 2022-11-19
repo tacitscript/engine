@@ -1,4 +1,3 @@
-import * as R from "ramda";
 
 const completeIndices = [
   [0, 1, 2],

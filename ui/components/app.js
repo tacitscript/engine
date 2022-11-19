@@ -1,4 +1,6 @@
-import React, {useReducer} from "react";
+import Sidebar from "common/components/sidebar.js";
+import getSidebarPanels from "../logic/get-sidebar-panels.js";
+import Board from "noughts-and-crosses/components/board.js";
 import {
   AppBar,
   Toolbar,
@@ -7,12 +9,8 @@ import {
   MuiThemeProvider,
   IconButton
 } from "material-ui";
-import Sidebar from "common/components/sidebar.jsx";
-import { push } from "third-party/redux-first/actions.js";
-import getSearchParams from "common/logic/get-search-params.js";
-import getSidebarPanels from "../logic/get-sidebar-panels.jsx";
-import Board from "noughts-and-crosses/components/board.jsx";
 
+const {useReducer} = React;
 const {css} = Glamor;
 const { grey, blueGrey } = colors;
 

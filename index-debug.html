@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css">
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<div id="root"></div>
 		
-		<!-- glamor cannot be imported via system.js v0 -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/glamor/3.0.0-3/index.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.47/system.js"></script>
-		<script src="systemjs.config.js"></script>
+		<script type="text/javascript" src="https://unpkg.com/systemjs@0.20.9/dist/system.src.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.27.1/ramda.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.6.0/redux.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/glamor/3.0.0-1/index.js"></script>
+		<script type="text/javascript" src="https://unpkg.com/@material-ui/core@3.9.3/umd/material-ui.development.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.7.2/prop-types.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/react-draggable@3.2.1/dist/react-draggable.min.js"></script>
+		<script type="text/javascript" src="https://unpkg.com/cnbuilder@1.0.9/dist/cnbuilder.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+		<script type="text/javascript" src="https://unpkg.com/react-flip-move@3.0.3/dist/react-flip-move.min.js"></script>
+		<script type="text/javascript" src="systemjs.config.js"></script>
 		<script>
-			System.import('./ui/logic/main.jsx').catch( function(err) {
+			System.import('ui/logic/main.js').catch( function(err) {
 				console.error(err);
 			})
 		</script>

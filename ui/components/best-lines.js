@@ -1,5 +1,3 @@
-import React from "react";
-import * as R from "ramda";
 import FlipMove from "react-flip-move";
 
 const {css} = Glamor;
