@@ -1,0 +1,3 @@
+[submodule "submodules/tacitscript"]
+	path = submodules/tacitscript
+	url = git@github.com:tacitscript/tacitscript.git
