@@ -13,7 +13,7 @@
 			"react-flip-move": "https://unpkg.com/react-flip-move@3.0.3/dist/react-flip-move.min.js",
 			"react": "https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js",
 			"react-dom": "https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js",
-			"material-ui": "https://unpkg.com/@material-ui/core@3.9.3/umd/material-ui.development.js",
+			"material-ui": "third-party/material-ui.development_3.9.3_remapped.js",
 		},
 		babelOptions: {
 			modularRuntime: false,

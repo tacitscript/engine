@@ -1,0 +1,25 @@
+{
+	"name": "tacitscript-engine",
+	"version": "0.0.1",
+	"description": "Generic games engine with pluggable games.",
+	"main": "build.js",
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/tacitscript/engine.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/tacitscript/engine/issues"
+	},
+	"homepage": "https://github.com/tacitscript/engine#readme",
+	"devDependencies": {
+		"systemjs-builder": "^0.16.15"
+	}
+}
