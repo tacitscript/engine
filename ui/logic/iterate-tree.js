@@ -1,6 +1,6 @@
 
 const iterateTree = ({tree, getNextStates, getResult, player, ply}) => {
-  const results = (() => {
+	const results = (() => {
 		if (tree.finalState != undefined) {
 			return {N: 1, W: tree.finalState};
 		} else if (!tree.childStates) { // expand this node
@@ -29,9 +29,9 @@ const iterateTree = ({tree, getNextStates, getResult, player, ply}) => {
 		}
 	})();
 
-  	tree.N += results.N;
-  	tree.W += results.W;
-	
+	tree.N += results.N;
+	tree.W += results.W;
+
 	if (!ply) {
 		tree.bestLines = R.pipe(
 			R.sortBy(R.prop("N")),
@@ -61,7 +61,7 @@ const iterateTree = ({tree, getNextStates, getResult, player, ply}) => {
 		)(tree.childStates);
 	}
 
-  return results;
+	return results;
 };
 
 export default iterateTree;
